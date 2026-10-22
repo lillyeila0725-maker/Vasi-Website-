@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vasi's Cursive Writing &amp; Grammar Learning · Tittangulam</title>
+<meta name="description" content="Cursive handwriting and English grammar classes in Muthu Nagar, Tittangulam, Tamil Nadu. Rated 5.0 on Google. Call 093445 57559.">
+<meta name="theme-color" content="#F4EFE6">
+<meta property="og:title" content="Vasi's Cursive Writing & Grammar Learning">
+<meta property="og:description" content="From basic strokes to full sentences. Cursive handwriting and grammar classes in Tittangulam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Separate links so one font failing never blocks the others -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Reenie+Beanie&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4EFE6; --paper-2:#EAE2D3; --card:#FBF8F2;
+  --ink:#1C2340; --ink-soft:#4B5272; --muted:#7A7F94;
+  --red:#C2402F; --gold:#C99A3B;
+  --rule-blue:#9DBBDB; --rule-red:#E4958E;
+  --night:#12162A; --night-2:#1B2140;
+  --serif:"Playfair Display", Georgia, serif;
+  --sans:"Manrope", system-ui, -apple-system, Segoe UI, sans-serif;
+  --script:"Playwrite IN", "Dancing Script", cursive;
+  --r:18px;
+  color-scheme: light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.eyebrow{font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:15px}
+.h-serif{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 22px;border-radius:4px;border:0;cursor:pointer;transition:transform .2s, background .2s}
+.btn:hover{transform:translateY(-2px);background:#0d1230}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn.red{background:var(--red)}
+
+/* ---------- Top bar + nav ---------- */
+.topbar{background:var(--ink);color:#E9E4F5;font-size:12.5px;letter-spacing:.04em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding:8px 0}
+.topbar a{text-decoration:none}
+.topbar .live{display:inline-flex;align-items:center;gap:8px}
+.topbar .live i{width:7px;height:7px;border-radius:50%;background:#5BD38A;box-shadow:0 0 0 0 #5BD38A;animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(28,35,64,.08);transition:background .4s,color .4s,border-color .4s}
+header.nav.dark{background:color-mix(in srgb,var(--night) 85%,transparent);color:var(--paper);border-color:rgba(255,255,255,.08)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.logo b{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:.08em}
+.logo span{font-family:var(--script);font-size:13px;color:var(--red)}
+nav.links{display:flex;gap:30px;font-size:14px;font-weight:500}
+nav.links a{text-decoration:none;opacity:.85;position:relative}
+nav.links a::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;background:currentColor;transition:width .3s}
+nav.links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-cta .btn{padding:10px 16px;font-size:12px}
+header.nav.dark .btn{background:var(--paper);color:var(--ink)}
+.burger{display:none;background:none;border:0;color:inherit;cursor:pointer;width:40px;height:40px}
+.mobile-menu{display:none}
+
+/* ---------- Scroll story hero ---------- */
+.story{position:relative;height:620vh;background:var(--bg,var(--paper));transition:background .6s}
+.story .stick{position:sticky;top:68px;height:calc(100svh - 68px);overflow:hidden;display:grid;grid-template-columns:minmax(300px,0.9fr) 1.3fr;align-items:center;gap:40px;width:min(1240px,100% - 40px);margin-inline:auto}
+.story-copy{position:relative;height:340px}
+.stage-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:18px;opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;pointer-events:none}
+.stage-copy.on{opacity:1;transform:none;pointer-events:auto}
+.stage-copy h1,.stage-copy h2{font-size:clamp(40px,5.6vw,78px)}
+.stage-copy p{max-width:380px;color:var(--ink-soft);font-size:16px}
+.story.is-dark .stage-copy h1,.story.is-dark .stage-copy h2{color:var(--paper)}
+.story.is-dark .stage-copy p,.story.is-dark .eyebrow{color:#B9BDD3}
+.story.is-dark .btn.ghost{color:var(--paper);box-shadow:inset 0 0 0 1px var(--paper)}
+.paper-wrap{position:relative;display:grid;place-items:center;height:100%}
+.paper{position:relative;width:100%;max-width:760px;aspect-ratio:8/5;background:var(--card);border-radius:6px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 30px 60px -20px rgba(28,35,64,.35),0 12px 24px -12px rgba(28,35,64,.2);transform:rotate(var(--rot,-1.2deg)) scale(var(--sc,1));transition:box-shadow .6s;will-change:transform}
+.paper::before{content:"";position:absolute;inset:0;border-radius:6px;background:radial-gradient(120% 90% at 20% 0%,rgba(255,255,255,.7),transparent 60%),repeating-linear-gradient(0deg,rgba(0,0,0,.012) 0 2px,transparent 2px 4px);pointer-events:none}
+.story.is-dark .paper{box-shadow:0 40px 90px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04)}
+.paper svg{position:absolute;inset:0;width:100%;height:100%}
+.paper .pin{position:absolute;top:-10px;left:50%;width:70px;height:22px;transform:translateX(-50%) rotate(-3deg);background:rgba(201,154,59,.35);backdrop-filter:blur(1px)}
+.dots{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
+.dots button{width:7px;height:7px;border-radius:50%;border:0;background:currentColor;opacity:.25;cursor:pointer;color:var(--ink);transition:opacity .3s,transform .3s}
+.dots button.on{opacity:1;transform:scale(1.35)}
+.story.is-dark .dots button{color:var(--paper)}
+.scroll-hint{position:absolute;right:0;bottom:24px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
+.scroll-hint i{width:1px;height:36px;background:currentColor;animation:hint 1.8s infinite;transform-origin:top}
+@keyframes hint{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.layer{transition:opacity .5s}
+.ink{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.story.is-dark .ink-text{}
+.wtext{font-family:var(--script);fill:var(--ink);stroke:var(--ink);stroke-width:.9px;paint-order:stroke}
+.wtext.red{fill:var(--red);stroke:var(--red)}
+.redline{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--ink);color:var(--paper);overflow:hidden;padding:18px 0;border-block:1px solid rgba(255,255,255,.06)}
+.marquee .track{display:flex;gap:48px;width:max-content;animation:mq 38s linear infinite;font-family:var(--serif);font-size:22px;font-style:italic;white-space:nowrap}
+.marquee .track span::after{content:"✦";font-style:normal;color:var(--gold);margin-left:48px;font-size:14px;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- Sections ---------- */
+section.block{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(36px,4.6vw,64px);max-width:720px}
+.sec-head p{max-width:380px;color:var(--ink-soft)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(28,35,64,.14);border-bottom:1px solid rgba(28,35,64,.14)}
+.stat{padding:34px 26px;border-right:1px solid rgba(28,35,64,.14)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--serif);font-weight:500;font-size:52px;line-height:1}
+.stat small{display:block;margin-top:10px;color:var(--ink-soft);font-size:14px}
+.stars{color:var(--gold);letter-spacing:2px}
+
+/* programs */
+.programs{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.prog{position:relative;background:var(--card);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(28,35,64,.06)}
+.prog .ph{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--paper-2)}
+.prog .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.prog:hover .ph img{transform:scale(1.06)}
+.prog .ph .tag{position:absolute;left:18px;top:18px;background:var(--paper);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:3px}
+.prog .body{padding:34px 34px 38px;display:flex;flex-direction:column;gap:16px;flex:1}
+.prog h3{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.1}
+.prog h3 em{font-family:var(--script);font-style:normal;font-size:.62em;color:var(--red);display:block;margin-bottom:6px;font-weight:300}
+.prog ul{list-style:none;display:grid;gap:0;margin-top:6px}
+.prog li{display:flex;gap:16px;padding:13px 0;border-top:1px dashed rgba(28,35,64,.2);font-size:15px}
+.prog li span{font-family:var(--serif);font-style:italic;color:var(--muted);min-width:24px}
+
+/* method */
+.method{background:var(--night);color:var(--paper)}
+.method .sec-head p{color:#B9BDD3}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.step{padding:30px 22px 10px 0;position:relative}
+.step .n{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:15px}
+.step svg{width:100%;height:70px;margin:18px 0 14px}
+.step svg path{fill:none;stroke:var(--paper);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 2.2s cubic-bezier(.3,.6,.2,1)}
+.step.in svg path{stroke-dashoffset:0}
+.step h4{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:8px}
+.step p{color:#B9BDD3;font-size:14.5px;padding-right:12px}
+.quote-line{margin-top:70px;font-family:var(--serif);font-size:clamp(26px,3vw,40px);font-style:italic;max-width:900px;line-height:1.3}
+.quote-line small{display:block;font-family:var(--sans);font-style:normal;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#B9BDD3;margin-top:18px}
+
+/* before / after */
+.ba{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.ba-card{position:relative;border-radius:var(--r);overflow:hidden;background:var(--card);aspect-ratio:16/10;box-shadow:0 30px 60px -30px rgba(28,35,64,.35);user-select:none;touch-action:pan-y}
+.ba-card .sheet{position:absolute;inset:0;padding:8% 7%;background:
+  linear-gradient(90deg,transparent 9%,var(--rule-red) 9%,var(--rule-red) calc(9% + 1.5px),transparent calc(9% + 1.5px)),
+  repeating-linear-gradient(180deg,transparent 0 46px,var(--rule-blue) 46px 47px) var(--card);
+  display:flex;align-items:center;padding-left:14%}
+.ba-card .sheet p{font-size:clamp(22px,2.8vw,36px);line-height:47px}
+.ba-card .before p{font-family:"Reenie Beanie",cursive;font-size:clamp(30px,3.6vw,46px);color:#3a3f57;transform:rotate(-1.5deg)}
+.ba-card .after{clip-path:inset(0 0 0 var(--cut,50%))}
+.ba-card .after p{font-family:var(--script);color:var(--ink);font-weight:300}
+.ba-card .handle{position:absolute;top:0;bottom:0;left:var(--cut,50%);width:2px;background:var(--red);transform:translateX(-1px)}
+.ba-card .handle::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:18px;box-shadow:0 6px 18px rgba(194,64,47,.4)}
+.ba-card .lbl{position:absolute;top:16px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--paper);padding:6px 10px;border-radius:3px;z-index:2}
+.ba-card .lbl.l{left:16px}.ba-card .lbl.r{right:16px}
+.ba-card input{position:absolute;inset:0;opacity:0;cursor:ew-resize;width:100%;height:100%}
+.note{font-size:12.5px;color:var(--muted);margin-top:14px}
+
+/* try it */
+.try{background:var(--paper-2)}
+.pad{background:var(--card);border-radius:var(--r);padding:30px;box-shadow:0 30px 60px -30px rgba(28,35,64,.3)}
+.pad form{display:flex;gap:12px;flex-wrap:wrap}
+.pad input[type=text]{flex:1;min-width:200px;font:500 16px var(--sans);padding:14px 16px;border:1px solid rgba(28,35,64,.2);border-radius:4px;background:var(--paper);color:var(--ink)}
+.pad input:focus{outline:2px solid var(--ink);outline-offset:1px}
+.pad svg{width:100%;height:auto;margin-top:22px;display:block}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:120px;gap:16px}
+.g{position:relative;border-radius:12px;overflow:hidden;background:var(--paper-2)}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.g:hover img{transform:scale(1.05)}
+.g figcaption{position:absolute;left:14px;bottom:14px;background:rgba(244,239,230,.94);font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:3px}
+.g .sample{position:absolute;right:12px;top:12px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;background:rgba(28,35,64,.78);color:#fff;padding:4px 8px;border-radius:3px}
+.g.fallback{display:grid;place-items:center;background:repeating-linear-gradient(180deg,transparent 0 30px,var(--rule-blue) 30px 31px) var(--card)}
+.g.fallback::before{content:attr(data-alt);font-family:var(--script);color:var(--ink-soft);padding:20px;text-align:center}
+.g1{grid-column:span 5;grid-row:span 3}.g2{grid-column:span 4;grid-row:span 2}.g3{grid-column:span 3;grid-row:span 2}
+.g4{grid-column:span 3;grid-row:span 2}.g5{grid-column:span 4;grid-row:span 2}.g6{grid-column:span 5;grid-row:span 1}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:24px}
+.rev{background:var(--card);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:18px;position:relative}
+.rev.big{background:var(--ink);color:var(--paper)}
+.rev.big .who small{color:#B9BDD3}
+.rev blockquote{font-family:var(--serif);font-size:20px;line-height:1.45}
+.rev.big blockquote{font-size:24px}
+.rev .who{margin-top:auto;display:flex;align-items:center;gap:12px}
+.rev .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--paper-2);color:var(--ink)}
+.rev.big .av{background:var(--gold)}
+.rev .who small{display:block;color:var(--muted);font-size:12.5px}
+.rev .reply{font-size:13px;padding:10px 14px;border-left:2px solid var(--gold);background:rgba(201,154,59,.08);border-radius:0 6px 6px 0}
+.rev.big .reply{background:rgba(255,255,255,.06)}
+.g-badge{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.g-badge .score{font-family:var(--serif);font-size:64px;line-height:1}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:stretch}
+.info{display:grid;gap:0;border-top:1px solid rgba(28,35,64,.14)}
+.info div{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(28,35,64,.14)}
+.info dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-top:3px}
+.info dd{font-size:17px}
+.info dd a{text-decoration:none;border-bottom:1px solid currentColor}
+.map{border-radius:var(--r);overflow:hidden;min-height:420px;background:var(--paper-2);box-shadow:0 30px 60px -30px rgba(28,35,64,.3)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:sepia(.18) saturate(.85)}
+.enquire{margin-top:30px;background:var(--card);border-radius:var(--r);padding:26px;display:grid;gap:12px}
+.enquire h3{font-family:var(--serif);font-weight:500;font-size:26px}
+.enquire .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.enquire input,.enquire select{font:500 15px var(--sans);padding:13px 14px;border:1px solid rgba(28,35,64,.2);border-radius:4px;background:var(--paper);color:var(--ink);width:100%}
+
+/* final cta + footer */
+.final{background:var(--night);color:var(--paper);text-align:center;padding:130px 0 120px;position:relative;overflow:hidden}
+.final h2{font-size:clamp(44px,7vw,110px)}
+.final .sig{font-family:var(--script);font-size:clamp(30px,4vw,54px);color:var(--gold);font-weight:300;margin-top:10px}
+.final p{color:#B9BDD3;margin:24px auto 36px;max-width:520px}
+.final .btn{background:var(--paper);color:var(--ink)}
+.final .btn.ghost{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 1px var(--paper)}
+footer{background:#0C0F1F;color:#9CA1BB;font-size:13.5px;padding:40px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fab{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;box-shadow:0 12px 30px rgba(12,15,31,.35);text-decoration:none;transition:transform .2s}
+.fab:hover{transform:scale(1.07)}
+.fab::after{content:"";position:absolute;top:4px;right:4px;width:12px;height:12px;border-radius:50%;background:var(--red);border:2px solid var(--paper)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  nav.links{display:none}
+  .burger{display:grid;place-items:center}
+  .mobile-menu.open{display:grid;position:fixed;inset:68px 0 auto 0;background:var(--paper);z-index:49;padding:20px;gap:6px;border-bottom:1px solid rgba(28,35,64,.1);color:var(--ink)}
+  .mobile-menu a{padding:12px 4px;font-family:var(--serif);font-size:24px;text-decoration:none;border-bottom:1px dashed rgba(28,35,64,.15)}
+  .story .stick{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:0;align-content:start;padding-top:22px}
+  .story-copy{height:230px}
+  .stage-copy{justify-content:flex-start;gap:12px}
+  .stage-copy h1,.stage-copy h2{font-size:clamp(34px,9vw,54px)}
+  .stage-copy p{font-size:14.5px}
+  .stage-copy .btn{display:none}
+  .paper-wrap{align-items:start;padding-top:8px}
+  .scroll-hint{display:none}
+  .programs,.ba,.visit{grid-template-columns:1fr}
+  .reviews{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid rgba(28,35,64,.14)}
+  .gallery{grid-auto-rows:110px}
+  .g1{grid-column:span 12;grid-row:span 3}.g2,.g3,.g4,.g5{grid-column:span 6;grid-row:span 2}.g6{grid-column:span 12;grid-row:span 2}
+  section.block{padding:84px 0}
+}
+@media (max-width:560px){
+  .topbar .hide-sm{display:none}
+  .steps{grid-template-columns:1fr}
+  .stat b{font-size:40px}
+  .info div{grid-template-columns:1fr;gap:4px}
+  .enquire .row{grid-template-columns:1fr}
+  .prog .body{padding:26px 22px 30px}
+  .nav-cta .btn{display:none}
+  .ba-card{aspect-ratio:4/3}
+  .ba-card .sheet p{font-size:19px;line-height:34px}
+  .ba-card .before p{font-size:26px}
+  .ba-card .sheet{background:linear-gradient(90deg,transparent 9%,var(--rule-red) 9%,var(--rule-red) calc(9% + 1.5px),transparent calc(9% + 1.5px)),repeating-linear-gradient(180deg,transparent 0 33px,var(--rule-blue) 33px 34px) var(--card)}
+}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none}
+  .marquee .track{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="live"><i></i> Open 24 hours</span>
+    <span class="hide-sm">Muthu Nagar, Tittangulam, Tamil Nadu 628501</span>
+    <a href="tel:+919344557559">Call 093445 57559</a>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Vasi's home"><b>VASI'S</b><span>cursive &amp; grammar</span></a>
+    <nav class="links" aria-label="Primary">
+      <a href="#programs">Classes</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn" href="#visit">Enquire</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="14" viewBox="0 0 22 14"><path d="M0 1h22M0 7h22M0 13h14" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#programs">Classes</a><a href="#method">Method</a><a href="#results">Results</a><a href="#reviews">Reviews</a><a href="#visit">Visit &amp; enquire</a>
+</div>
+
+<!-- ================= SCROLL STORY (mirrors the reference: one object, five stages) ================= -->
+<section class="story" id="top" aria-label="From basic strokes to full sentences">
+  <div class="stick">
+    <div class="story-copy">
+      <div class="stage-copy on" data-stage="0">
+        <span class="eyebrow">Cursive writing &amp; grammar · Tittangulam</span>
+        <h1 class="h-serif">It starts with<br>a stroke.</h1>
+        <p>Every beautiful hand begins with the basics: loops, ovals and waves, practised until they flow on their own.</p>
+        <div><a href="#programs" class="btn">Explore classes</a></div>
+      </div>
+      <div class="stage-copy" data-stage="1">
+        <span class="eyebrow">Step two</span>
+        <h2 class="h-serif">Letter by<br>letter.</h2>
+        <p>Each letter is shaped on the four-line ruling, with the right height, slant and spacing.</p>
+      </div>
+      <div class="stage-copy" data-stage="2">
+        <span class="eyebrow">Step three</span>
+        <h2 class="h-serif">Joined to<br>flow.</h2>
+        <p>Then the letters join up. Joining turns slow printing into fast, graceful cursive.</p>
+      </div>
+      <div class="stage-copy" data-stage="3">
+        <span class="eyebrow">And the words underneath</span>
+        <h2 class="h-serif">Grammar<br>that holds.</h2>
+        <p>Simple explanations with thorough practice. Students learn <em>why</em> a sentence is right, not only that it is.</p>
+      </div>
+      <div class="stage-copy" data-stage="4">
+        <span class="eyebrow"><span class="stars">★★★★★</span> 5.0 on Google · 23 reviews</span>
+        <h2 class="h-serif">Words worth<br>writing.</h2>
+        <p>A friendly teacher, daily practice and handwriting that visibly changes within months.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#visit" class="btn">Enquire now</a><a href="tel:+919344557559" class="btn ghost">Call</a></div>
+      </div>
+    </div>
+
+    <div class="paper-wrap">
+      <div class="paper" id="paper">
+        <span class="pin"></span>
+        <svg id="sheet" viewBox="0 0 800 500" aria-hidden="true">
+          <!-- margin line -->
+          <line x1="78" y1="0" x2="78" y2="500" stroke="var(--rule-red)" stroke-width="1.5"/>
+          <g id="rules"></g>
+          <g class="layer" id="L0"></g>
+          <g class="layer" id="L1" opacity="0"></g>
+          <g class="layer" id="L2" opacity="0"></g>
+          <g class="layer" id="L3" opacity="0"></g>
+          <g class="layer" id="L4" opacity="0"></g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="dots" id="dots" aria-label="Story progress">
+      <button class="on" aria-label="Strokes"></button><button aria-label="Letters"></button><button aria-label="Joining"></button><button aria-label="Grammar"></button><button aria-label="Result"></button>
+    </div>
+    <div class="scroll-hint"><i></i>Scroll to write</div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Basic strokes</span><span>Letter formation</span><span>Four-line ruling</span><span>Joining letters</span><span>Neat &amp; fast</span><span>Parts of speech</span><span>Tenses</span><span>Sentence building</span><span>Punctuation</span><span>Daily practice</span>
+    <span>Basic strokes</span><span>Letter formation</span><span>Four-line ruling</span><span>Joining letters</span><span>Neat &amp; fast</span><span>Parts of speech</span><span>Tenses</span><span>Sentence building</span><span>Punctuation</span><span>Daily practice</span>
+  </div>
+</div>
+
+<!-- ================= STATS ================= -->
+<section class="block" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><b data-count="5.0">5.0</b><small><span class="stars">★★★★★</span> Google rating</small></div>
+      <div class="stat"><b data-count="23">23</b><small>Five-star reviews from families</small></div>
+      <div class="stat"><b>24<span style="font-size:.5em">hrs</span></b><small>Open every day</small></div>
+      <div class="stat"><b>2</b><small>Skills, one desk: cursive + grammar</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMS ================= -->
+<section class="block" id="programs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h-serif">Two skills.<br>One steady hand.</h2>
+      <p>Handwriting and grammar are taught side by side, so students write correctly <em>and</em> beautifully.</p>
+    </div>
+    <div class="programs">
+      <article class="prog reveal">
+        <div class="ph">
+          <!-- PHOTO SLOT: replace with a real photo of a student's cursive notebook -->
+          <img src="https://images.unsplash.com/photo-1543769657-fcf1236421bc?auto=format&fit=crop&w=1200&q=75" alt="Handwritten cursive text on paper" loading="lazy" data-fallback>
+          <span class="tag">Course 01</span>
+        </div>
+        <div class="body">
+          <h3><em>the art of</em>Cursive Handwriting</h3>
+          <p style="color:var(--ink-soft)">Taught step by step, from basic strokes to full sentences, on the four-line ruling.</p>
+          <ul>
+            <li><span>i.</span>Basic strokes, loops &amp; patterns</li>
+            <li><span>ii.</span>Small letters &amp; capitals</li>
+            <li><span>iii.</span>Joining &amp; connecting letters</li>
+            <li><span>iv.</span>Words, sentences &amp; paragraphs</li>
+            <li><span>v.</span>Speed with neatness</li>
+          </ul>
+        </div>
+      </article>
+      <article class="prog reveal">
+        <div class="ph">
+          <!-- PHOTO SLOT: replace with a real photo of a grammar lesson / workbook -->
+          <img src="https://images.unsplash.com/photo-1726831662518-c48d983f9b86?auto=format&fit=crop&w=1200&q=75" alt="A student writing on paper" loading="lazy" data-fallback>
+          <span class="tag">Course 02</span>
+        </div>
+        <div class="body">
+          <h3><em>the logic of</em>English Grammar</h3>
+          <p style="color:var(--ink-soft)">Simple explanations, plenty of worked examples, and practice until it sticks.</p>
+          <ul>
+            <li><span>i.</span>Parts of speech</li>
+            <li><span>ii.</span>Tenses &amp; subject–verb agreement</li>
+            <li><span>iii.</span>Sentence structure</li>
+            <li><span>iv.</span>Punctuation &amp; capitalisation</li>
+            <li><span>v.</span>Common errors &amp; correction</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= METHOD ================= -->
+<section class="block method" id="method">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h-serif">The method,<br>stroke by stroke.</h2>
+      <p>Five stages, each built on the last. Nobody skips ahead and nobody gets left behind.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="n">01</span>
+        <svg viewBox="0 0 200 70"><path d="M8 55 C 20 55, 24 10, 32 10 C 40 10, 36 55, 30 55 C 24 55, 44 55, 52 55 C 64 55, 68 10, 76 10 C 84 10, 80 55, 74 55 C 68 55, 88 55, 96 55 C 108 55, 112 10, 120 10 C 128 10, 124 55, 118 55 C 112 55, 132 55, 140 55"/></svg>
+        <h4>Strokes</h4><p>Loops, ovals and slants build control in the fingers and wrist.</p></div>
+      <div class="step reveal"><span class="n">02</span>
+        <svg viewBox="0 0 200 70"><path d="M40 40 C 40 25, 18 25, 18 42 C 18 58, 40 56, 40 40 L 42 56 M 70 10 L 64 56 C 70 40, 92 38, 88 52 C 84 60, 68 58, 66 50"/></svg>
+        <h4>Letters</h4><p>Each letter's correct shape, height and slant on four lines.</p></div>
+      <div class="step reveal"><span class="n">03</span>
+        <svg viewBox="0 0 200 70"><path d="M10 54 C 20 50, 26 36, 30 36 C 22 36, 18 56, 30 52 C 36 50, 40 36, 40 36 L 40 52 C 46 56, 52 40, 58 36 C 62 50, 64 56, 72 50 C 80 44, 82 36, 90 38 C 82 42, 84 56, 94 50 C 100 46, 108 40, 114 40"/></svg>
+        <h4>Joining</h4><p>Letters connect into words with smooth, unbroken joins.</p></div>
+      <div class="step reveal"><span class="n">04</span>
+        <svg viewBox="0 0 200 70"><path d="M10 30 L 150 30 M 10 50 L 110 50 M 120 46 L 130 56 L 150 34"/></svg>
+        <h4>Sentences</h4><p>Grammar and handwriting meet: correct sentences, neatly written.</p></div>
+      <div class="step reveal"><span class="n">05</span>
+        <svg viewBox="0 0 200 70"><path d="M100 8 L 110 30 L 134 32 L 116 46 L 122 68 L 100 56 L 78 68 L 84 46 L 66 32 L 90 30 Z"/></svg>
+        <h4>Daily practice</h4><p>Short, regular practice is what makes the change last.</p></div>
+    </div>
+    <p class="quote-line reveal">“The cursive tutorials break everything down from basic strokes to full sentences… Practicing daily really works.”<small>Maitheen Abdul Kadar · Google review</small></p>
+  </div>
+</section>
+
+<!-- ================= BEFORE / AFTER ================= -->
+<section class="block" id="results">
+  <div class="wrap ba">
+    <div class="reveal">
+      <span class="eyebrow">Drag to compare</span>
+      <h2 class="h-serif" style="font-size:clamp(36px,4.6vw,64px);margin:12px 0 18px">A visible<br>transformation.</h2>
+      <p style="color:var(--ink-soft);max-width:420px">“We can see a good transformation in handwriting within months.” Parents notice it in school notebooks first, then everywhere else.</p>
+      <p class="note">— Lavanya T, Google review</p>
+    </div>
+    <div class="reveal">
+      <div class="ba-card" id="ba">
+        <span class="lbl l">Before</span><span class="lbl r">After</span>
+        <div class="sheet before"><p>The quick brown fox jumps over the lazy dog.</p></div>
+        <div class="sheet after"><p>The quick brown fox jumps over the lazy dog.</p></div>
+        <div class="handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare before and after handwriting">
+      </div>
+      <!-- Swap these two lines of text for scans of a real student's before/after pages once the client shares them -->
+      <p class="note">Illustration only. Real student before-and-after pages can go here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRY IT ================= -->
+<section class="block try">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h-serif">See your name<br>in cursive.</h2>
+      <p>Type a name and watch it written on the four-line ruling, the same way students learn it.</p>
+    </div>
+    <div class="pad reveal">
+      <form id="tryForm" autocomplete="off">
+        <input type="text" id="tryName" maxlength="22" placeholder="Type a name, e.g. Lavanya" aria-label="Name to write in cursive">
+        <button class="btn red" type="submit">Write it ✎</button>
+      </form>
+      <svg id="trySvg" viewBox="0 0 1000 200" aria-live="polite"></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="block" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h-serif">Inside the<br>classroom.</h2>
+      <p>Pens, notebooks and steady progress. Every page here is practice that paid off.</p>
+    </div>
+    <!-- PHOTO SLOTS: each image below is a stand-in stock photo. Replace src with real photos of Vasi's (see README). -->
+    <div class="gallery">
+      <figure class="g g1 reveal" data-alt="Class in progress"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=75" alt="Fountain pen resting on lined paper" loading="lazy" data-fallback><span class="sample">Sample photo</span><figcaption>Every lesson starts on lined paper</figcaption></figure>
+      <figure class="g g2 reveal" data-alt="Student practising"><img src="https://images.unsplash.com/photo-1649954049118-1c213fcdeadc?auto=format&fit=crop&w=1000&q=75" alt="A person writing on paper" loading="lazy" data-fallback><span class="sample">Sample photo</span><figcaption>Guided practice</figcaption></figure>
+      <figure class="g g3 reveal" data-alt="Teacher's desk"><img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?auto=format&fit=crop&w=800&q=75" alt="Fountain pen close-up" loading="lazy" data-fallback><span class="sample">Sample photo</span><figcaption>The right tools</figcaption></figure>
+      <figure class="g g4 reveal" data-alt="Notebook pages"><img src="https://images.unsplash.com/photo-1611619899256-5e61d4c46df9?auto=format&fit=crop&w=800&q=75" alt="Person writing on white paper" loading="lazy" data-fallback><span class="sample">Sample photo</span><figcaption>Neat, joined letters</figcaption></figure>
+      <figure class="g g5 reveal" data-alt="Grammar session"><img src="https://images.unsplash.com/photo-1687145183501-0c8e76bc2175?auto=format&fit=crop&w=1000&q=75" alt="Writing with a pen" loading="lazy" data-fallback><span class="sample">Sample photo</span><figcaption>Sentences that make sense</figcaption></figure>
+      <figure class="g g6 reveal" data-alt="Certificates / student work"><img src="https://images.unsplash.com/photo-1543769657-fcf1236421bc?auto=format&fit=crop&w=1400&q=75" alt="Cursive handwriting on a page" loading="lazy" data-fallback style="object-position:center 35%"><span class="sample">Sample photo</span><figcaption>From strokes to full sentences</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS (real Google reviews, quoted verbatim) ================= -->
+<section class="block" id="reviews" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h-serif">What families<br>say.</h2>
+      <div class="g-badge"><span class="score">5.0</span><div><span class="stars" style="font-size:20px">★★★★★</span><br><small style="color:var(--ink-soft)">23 reviews on Google</small></div></div>
+    </div>
+    <div class="reviews">
+      <article class="rev big reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>“I always struggled with my handwriting and grammar… The cursive tutorials break everything down from basic strokes to full sentences. Grammar explanations are simple but thorough. Practicing daily really works. Thank you Vasi!”</blockquote>
+        <div class="reply">Owner's reply: Thank you 🙏</div>
+        <div class="who"><span class="av">M</span><div>Maitheen Abdul Kadar<small>Google review</small></div></div>
+      </article>
+      <article class="rev reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>“Very good class. The teacher is friendly and makes the kid do well. We can see a good transformation in handwriting within months.”</blockquote>
+        <div class="reply">Owner's reply: Thank you 🙏</div>
+        <div class="who"><span class="av">L</span><div>Lavanya T<small>Google review</small></div></div>
+      </article>
+      <article class="rev reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>“Teaching skill is very nice ❤️ I like to come to that tuition 🌹 Thank you for your support and service 🎉 I love it 💐”</blockquote>
+        <div class="who"><span class="av">A</span><div>akila M<small>Google review</small></div></div>
+      </article>
+    </div>
+    <p style="margin-top:28px"><a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Vasi%27s+Cursive+Writing+and+Grammar+Learning+Tittangulam">Read all 23 reviews on Google ↗</a></p>
+  </div>
+</section>
+
+<!-- ================= VISIT + ENQUIRY ================= -->
+<section class="block" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h-serif">Come write<br>with us.</h2>
+      <p>Send an enquiry on WhatsApp, call, or drop by. We're open 24 hours.</p>
+    </div>
+    <div class="visit">
+      <div class="reveal">
+        <dl class="info">
+          <div><dt>Address</dt><dd>Muthu Nagar, Shanmugasigamani Nagar,<br>Tittangulam, Tamil Nadu 628501</dd></div>
+          <div><dt>Plus code</dt><dd>5VCP+PM Tittangulam</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+919344557559">093445 57559</a></dd></div>
+          <div><dt>Hours</dt><dd>Open 24 hours</dd></div>
+        </dl>
+        <form class="enquire" id="enq">
+          <h3>Quick enquiry</h3>
+          <div class="row">
+            <input required name="name" placeholder="Parent / student name" aria-label="Name">
+            <input name="age" placeholder="Student's class or age" aria-label="Class or age">
+          </div>
+          <select name="course" aria-label="Course">
+            <option>Cursive handwriting</option>
+            <option>English grammar</option>
+            <option>Both cursive &amp; grammar</option>
+          </select>
+          <button class="btn red" type="submit">Send on WhatsApp →</button>
+        </form>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to Vasi's Cursive Writing and Grammar Learning" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Vasi%27s+Cursive+Writing+and+Grammar+Learning,+Tittangulam,+Tamil+Nadu+628501&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap reveal">
+    <h2 class="h-serif">Handwriting<br>worth keeping.</h2>
+    <div class="sig">— Vasi's</div>
+    <p>Cursive writing and grammar learning in Tittangulam. From the first stroke to the final full stop.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn" href="tel:+919344557559">Call 093445 57559</a>
+      <a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Vasi%27s+Cursive+Writing+and+Grammar+Learning+Tittangulam">Get directions ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Vasi's Cursive Writing &amp; Grammar Learning · Tittangulam, Tamil Nadu</span>
+    <span>Reviews quoted from Google. Photos marked “Sample” are placeholders.</span>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+919344557559" aria-label="Call Vasi's">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+</a>
+
+<script>
+(() => {
+const NS = "http://www.w3.org/2000/svg";
+const PHONE = "919344557559";
+const $ = s => document.querySelector(s);
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const ease = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+const seg = (t, a, b) => clamp((t - a) / (b - a));
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const el = (tag, attrs, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); parent && parent.appendChild(n); return n; };
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* ---------- Image fallback: a ruled card instead of a broken image ---------- */
+document.querySelectorAll("img[data-fallback]").forEach(img => {
+  const fail = () => { const f = img.closest("figure, .ph"); if (f) { f.classList.add("fallback", "g"); } img.remove(); };
+  img.addEventListener("error", fail);
+  if (img.complete && img.naturalWidth === 0 && img.src) fail();
+});
+
+/* ---------- Four-line copybook ruling ---------- */
+const rules = $("#rules");
+function ruling(g, top, h, x1 = 0, x2 = 800) {
+  // top line, dashed midline, baseline (red), bottom line
+  const ys = [top, top + h/3, top + 2*h/3, top + h];
+  ys.forEach((y, i) => el("line", { x1, x2, y1: y, y2: y, stroke: i === 2 ? "var(--rule-red)" : "var(--rule-blue)", "stroke-width": i === 2 ? 1.4 : 1, "stroke-dasharray": i === 1 ? "6 6" : "none" }, g));
+  return ys;
+}
+const R1 = ruling(rules, 120, 105);   // lines 120,155,190,225
+const R2 = ruling(rules, 290, 105);   // lines 290,325,360,395
+
+/* ---------- "Writer": per-glyph stroke-draw then fill, in order ---------- */
+class Writer {
+  constructor(parent, str, x, y, size, opts = {}) {
+    this.t = el("text", { x, y, class: "wtext" + (opts.red ? " red" : ""), "font-size": size, "text-anchor": opts.anchor || "start", "font-weight": opts.weight || 300 }, parent);
+    this.D = size * 9;
+    this.spans = [...str].map(ch => { const s = el("tspan", {}, this.t); s.textContent = ch; return s; });
+    this.ink = this.spans.filter(s => s.textContent.trim());
+    this.set(0);
+  }
+  set(p) {
+    const n = this.ink.length, span = 1 / n * 2.2;          // glyphs overlap so it feels like continuous writing
+    this.ink.forEach((s, i) => {
+      const start = (i / n) * (1 - span);
+      const q = clamp((p - start) / span);
+      s.style.strokeDasharray = this.D;
+      s.style.strokeDashoffset = this.D * (1 - q);
+      s.style.fillOpacity = clamp((q - .55) / .45);
+      s.style.strokeOpacity = q > 0 ? 1 : 0;
+    });
+  }
+}
+class Pen {  // a plain path that draws itself
+  constructor(parent, d, cls = "ink") { this.p = el("path", { d, class: cls }, parent); this.L = this.p.getTotalLength(); this.p.style.strokeDasharray = this.L; this.set(0); }
+  set(q) { this.p.style.strokeDashoffset = this.L * (1 - q); this.p.style.opacity = q > 0 ? 1 : 0; }
+}
+const pts = (f, n) => { let d = ""; for (let i = 0; i <= n; i++) { const [x, y] = f(i / n); d += (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1); } return d; };
+
+let stages = [];
+function build() {
+  ["#L0","#L1","#L2","#L3","#L4"].forEach(s => $(s).innerHTML = "");
+  const [a1, m1, b1, d1] = R1, [a2, m2, b2, d2] = R2;
+
+  /* Stage 0: basic strokes — loops (prolate cycloid), coils, waves */
+  const L0 = $("#L0");
+  const loops = new Pen(L0, pts(t => { const u = t * Math.PI * 2 * 14; return [110 + u * 5.6 - 26 * Math.sin(u), b1 - 32 + 32 * Math.cos(u) * -1 + 0]; }, 900));
+  const coils = new Pen(L0, pts(t => { const u = t * Math.PI * 2 * 18; return [120 + u * 3.6 + 15 * Math.cos(u + Math.PI), (m2 + b2) / 2 + 16 * Math.sin(u)]; }, 900));
+  const wave  = new Pen(L0, pts(t => [110 + t * 640, d2 + 50 + 10 * Math.sin(t * Math.PI * 14)], 400));
+  stages[0] = t => { loops.set(ease(seg(t, .05, .4))); coils.set(ease(seg(t, .3, .62))); wave.set(ease(seg(t, .55, .72))); };
+
+  /* Stage 1: letters */
+  const L1 = $("#L1");
+  const w1 = new Writer(L1, "a b c d e f g h", 105, b1, 64);
+  const w2 = new Writer(L1, "A B C D E", 105, b2, 64);
+  stages[1] = t => { w1.set(seg(t, .04, .45)); w2.set(seg(t, .4, .72)); };
+
+  /* Stage 2: a joined word, big */
+  const L2 = $("#L2");
+  const w3 = new Writer(L2, "beautiful", 400, b1 + 70, 110, { anchor: "middle" });
+  const under = new Pen(L2, "M200 " + (b2 + 20) + " C 330 " + (b2 + 6) + ", 470 " + (b2 + 6) + ", 600 " + (b2 + 18), "redline");
+  stages[2] = t => { w3.set(seg(t, .04, .6)); under.set(ease(seg(t, .6, .72))); };
+
+  /* Stage 3: grammar correction in red pen */
+  const L3 = $("#L3");
+  const s1 = new Writer(L3, "She don't like grammar.", 100, b1, 50);
+  const s2 = new Writer(L3, "Now she loves it!", 100, b2, 50);
+  // locate "don't" for the strike + correction
+  let x0 = 220, x1 = 330;
+  try { x0 = s1.t.getStartPositionOfChar(4).x; x1 = s1.t.getEndPositionOfChar(8).x; } catch (e) {}
+  const strike = new Pen(L3, `M${x0 - 4} ${m1 + 12} L ${x1 + 4} ${m1 + 6}`, "redline");
+  const fix = new Writer(L3, "doesn't", (x0 + x1) / 2, a1 - 10, 38, { red: true, anchor: "middle" });
+  const caret = new Pen(L3, `M${(x0 + x1) / 2 - 10} ${b1 + 16} L ${(x0 + x1) / 2} ${b1 + 4} L ${(x0 + x1) / 2 + 10} ${b1 + 16}`, "redline");
+  let ex = 600; try { ex = s2.t.getEndPositionOfChar(16).x; } catch (e) {}
+  const tick = new Pen(L3, `M${ex + 26} ${b2 - 22} L ${ex + 40} ${b2 - 6} L ${ex + 74} ${b2 - 52}`, "redline");
+  stages[3] = t => { s1.set(seg(t, .03, .3)); strike.set(ease(seg(t, .3, .37))); caret.set(ease(seg(t, .36, .41))); fix.set(seg(t, .4, .52)); s2.set(seg(t, .52, .72)); tick.set(ease(seg(t, .72, .78))); };
+
+  /* Stage 4: signature */
+  const L4 = $("#L4");
+  const sig = new Writer(L4, "Vasi's", 400, b1 + 62, 130, { anchor: "middle", weight: 400 });
+  const swash = new Pen(L4, `M240 ${b1 + 92} C 360 ${b1 + 120}, 520 ${b1 + 70}, 580 ${b1 + 86}`, "ink");
+  const sub = el("text", { x: 400, y: b2 + 30, "text-anchor": "middle", "font-family": "Manrope, sans-serif", "font-size": 17, "letter-spacing": "4", fill: "var(--ink-soft)", opacity: 0 }, L4);
+  sub.textContent = "CURSIVE WRITING · GRAMMAR LEARNING";
+  const st = el("text", { x: 400, y: b2 + 68, "text-anchor": "middle", "font-size": 26, fill: "var(--gold)", "letter-spacing": "6", opacity: 0 }, L4);
+  st.textContent = "★★★★★";
+  stages[4] = t => { sig.set(seg(t, .03, .45)); swash.set(ease(seg(t, .42, .55))); sub.setAttribute("opacity", seg(t, .52, .62)); st.setAttribute("opacity", seg(t, .58, .68)); };
+}
+
+/* ---------- Scroll driver ---------- */
+const story = $(".story"), paper = $("#paper"), nav = $("#nav");
+const copies = [...document.querySelectorAll(".stage-copy")], dots = [...document.querySelectorAll("#dots button")];
+const layers = [0,1,2,3,4].map(i => $("#L" + i));
+const DARK = [false, false, true, true, false];
+let cur = -1;
+
+function frame() {
+  const r = story.getBoundingClientRect();
+  const total = story.offsetHeight - innerHeight;
+  const p = clamp(-r.top / total, 0, .9999) * 5;            // 0..5
+  const i = Math.floor(p), t = p - i;
+  if (i !== cur) {
+    cur = i;
+    copies.forEach((c, k) => c.classList.toggle("on", k === i));
+    dots.forEach((d, k) => d.classList.toggle("on", k === i));
+    story.classList.toggle("is-dark", DARK[i]);
+    story.style.setProperty("--bg", DARK[i] ? "var(--night)" : "var(--paper)");
+  }
+  nav.classList.toggle("dark", DARK[i] && r.top < 0 && r.bottom > 80);
+  layers.forEach((L, k) => {
+    // current layer visible; fades out over the last 12% of its stage (last stage stays)
+    let o = k === i ? (i < 4 ? 1 - seg(t, .88, 1) : 1) : 0;
+    L.setAttribute("opacity", o.toFixed(3));
+  });
+  for (let k = 0; k < 5; k++) stages[k] && stages[k](k < i ? 1 : k > i ? 0 : t);
+  // gentle "object" motion like the reference: the page tilts and settles
+  paper.style.setProperty("--rot", (-1.4 + Math.sin(p * 1.3) * 1.4).toFixed(2) + "deg");
+  paper.style.setProperty("--sc", (0.97 + 0.03 * Math.cos(t * Math.PI * 2)).toFixed(3));
+}
+let ticking = false;
+const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { frame(); ticking = false; }); } };
+
+dots.forEach((d, k) => d.addEventListener("click", () => {
+  const total = story.offsetHeight - innerHeight;
+  scrollTo({ top: story.offsetTop + total * (k + .7) / 5, behavior: "smooth" });
+}));
+
+function start() {
+  build();
+  if (reduce) { stages.forEach(s => s(1)); }
+  frame();
+  addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", onScroll);
+}
+(document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(start);
+
+/* ---------- Reveal on scroll + method strokes ---------- */
+document.querySelectorAll(".step svg path").forEach(p => p.style.setProperty("--len", Math.ceil(p.getTotalLength())));
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll(".reveal").forEach((n, i) => { n.style.transitionDelay = (i % 3) * 90 + "ms"; io.observe(n); });
+
+/* ---------- Before / after ---------- */
+const ba = $("#ba"), range = ba.querySelector("input");
+const setCut = v => ba.style.setProperty("--cut", v + "%");
+range.addEventListener("input", e => setCut(e.target.value));
+const baIO = new IntersectionObserver(es => { if (es[0].isIntersecting && !reduce) { let v = 85; const id = setInterval(() => { v -= 1.2; setCut(v); range.value = v; if (v <= 45) clearInterval(id); }, 16); baIO.disconnect(); } }, { threshold: .5 });
+baIO.observe(ba);
+
+/* ---------- Try it: your name in cursive ---------- */
+const trySvg = $("#trySvg");
+let tryWriter, raf;
+function writeName(name) {
+  trySvg.innerHTML = "";
+  ruling(trySvg, 40, 120, 0, 1000);
+  el("line", { x1: 60, x2: 60, y1: 0, y2: 200, stroke: "var(--rule-red)", "stroke-width": 1.5 }, trySvg);
+  const size = name.length > 14 ? 62 : 84;
+  tryWriter = new Writer(trySvg, name, 90, 120, size);
+  cancelAnimationFrame(raf);
+  if (reduce) { tryWriter.set(1); return; }
+  const t0 = performance.now(), dur = 900 + name.length * 170;
+  const step = now => { const q = clamp((now - t0) / dur); tryWriter.set(q); if (q < 1) raf = requestAnimationFrame(step); };
+  raf = requestAnimationFrame(step);
+}
+$("#tryForm").addEventListener("submit", e => { e.preventDefault(); writeName($("#tryName").value.trim() || "Vasi's"); });
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
+  ruling(trySvg, 40, 120, 0, 1000);
+  const tio = new IntersectionObserver(es => { if (es[0].isIntersecting) { writeName("Handwriting"); tio.disconnect(); } }, { threshold: .4 });
+  tio.observe(trySvg);
+});
+
+/* ---------- WhatsApp enquiry ---------- */
+$("#enq").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const msg = `Hello Vasi's! I'd like to enquire about classes.%0A%0AName: ${encodeURIComponent(f.get("name"))}%0AClass/Age: ${encodeURIComponent(f.get("age") || "-")}%0ACourse: ${encodeURIComponent(f.get("course"))}`;
+  window.open(`https://wa.me/${PHONE}?text=${msg}`, "_blank", "noopener");
+});
+
+/* ---------- Mobile menu ---------- */
+const burger = $("#burger"), mm = $("#mobileMenu");
+burger.addEventListener("click", () => { const o = mm.classList.toggle("open"); burger.setAttribute("aria-expanded", o); });
+mm.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { mm.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
+})();
+</script>
+</body>
+</html>
